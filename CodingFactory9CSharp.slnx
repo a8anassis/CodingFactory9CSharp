@@ -1,3 +1,8 @@
 <Solution>
   <Project Path="HelloWorld/HelloWorld.csproj" />
+  <Project Path="KilometersApp/KilometersApp.csproj" />
+  <Project Path="NumberRead/NumberRead.csproj" />
+  <Project Path="PrintingApp/PrintingApp.csproj" />
+  <Project Path="ProductsVat/ProductsVat.csproj" />
+  <Project Path="Traveling/Traveling.csproj" />
 </Solution>
