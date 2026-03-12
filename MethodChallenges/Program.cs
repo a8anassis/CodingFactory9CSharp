@@ -85,6 +85,31 @@ namespace MethodChallenges
             }
         }
 
+        // Binary search for an int in a sorted array
+        public static int BinarySearch(int[] arr, int val) 
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+
+            while (left <= right)
+            {
+                int med = (left + right) / 2;
+
+                if (arr[med] == val) return med; // found
+                
+                if (arr[med] < val)
+                {
+                    left = med + 1; // search right half
+                }
+                else
+                {
+                    right = med - 1; // search left half
+                }
+            }
+
+            return -1;
+        }
+
 
 
 
