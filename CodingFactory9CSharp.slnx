@@ -18,6 +18,7 @@
   <Project Path="NumberRead/NumberRead.csproj" />
   <Project Path="PalindromeStr/PalindromeStr.csproj" Id="12081b92-63b5-4156-a68d-e360b1386f7c" />
   <Project Path="PocoApp/PocoApp.csproj" Id="915289db-d337-430a-8eb7-b5a31bac549b" />
+  <Project Path="PointApp/PointApp.csproj" Id="15aedf79-5ae3-4fa3-8b18-74cba19041b7" />
   <Project Path="PrintingApp/PrintingApp.csproj" />
   <Project Path="ProductsVat/ProductsVat.csproj" />
   <Project Path="RegExApp/RegExApp.csproj" Id="8667fcdf-8f6c-4322-b2ea-dd39dc8972dc" />
