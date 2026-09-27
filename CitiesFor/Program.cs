@@ -8,12 +8,23 @@
 
             for (int i = 0; i < cities.Length; i++)
             {
-                Console.WriteLine(cities[i]);
+                //Console.WriteLine(cities[i]);
+                if (cities[i] == "Patras")
+                {
+                    Console.WriteLine("Found Patras!");
+                    break;
+                }
             }
 
             foreach (string city in cities)
             {
                 Console.WriteLine(city);
+                
+                if (city == "Heraklion")
+                {
+                    Console.WriteLine("Found Heraklion!");
+                    break;
+                }
             }
         }
     }

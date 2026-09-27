@@ -10,8 +10,8 @@
         static void Main(string[] args)
         {
             // Δήλωση και αρχικοποίηση μεταβλητών
-            const double METERS_PER_KM  = 1000D;
-            const double CM_PER_KM      = 100000D;
+            const double METERS_PER_KM  = 1_000D;
+            const double CM_PER_KM      = 100_000D;
             const double MILES_PER_KM   = 0.621371D;
 
             double kilometers   = 0D;

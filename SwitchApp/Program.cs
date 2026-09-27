@@ -49,6 +49,8 @@
                 _ => "Invalid day"
             };
 
+            Console.WriteLine(result);
+
             // pattern matching with switch expression
             int score = 85;
 
@@ -60,6 +62,8 @@
                 >= 50 => "D",
                 _ => "F"
             };
+
+            Console.WriteLine($"Score: {score}, Grade: {grade}");
 
         }
     }

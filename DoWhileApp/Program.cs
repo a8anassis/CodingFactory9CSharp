@@ -7,9 +7,9 @@
     {
         static void Main(string[] args)
         {
-            int num = 0;
-            int numberOfDigits = 0;
-            int tmp = 0;
+            int num             = 0;
+            int numberOfDigits  = 0;
+            int tmp             = 0;
 
             Console.WriteLine("Εισάγετε ένα ακέραιο");
             if (!int.TryParse(Console.ReadLine(), out num))
