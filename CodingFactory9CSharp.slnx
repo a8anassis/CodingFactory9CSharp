@@ -29,6 +29,7 @@
   <Project Path="PointApp/PointApp.csproj" Id="15aedf79-5ae3-4fa3-8b18-74cba19041b7" />
   <Project Path="PrintingApp/PrintingApp.csproj" />
   <Project Path="ProductsVat/ProductsVat.csproj" />
+  <Project Path="Pyramid/Pyramid.csproj" Id="3e1d3ed4-fc78-4849-b5e1-8b610ef48aea" />
   <Project Path="RegExApp/RegExApp.csproj" Id="8667fcdf-8f6c-4322-b2ea-dd39dc8972dc" />
   <Project Path="StringBuilderApp/StringBuilderApp.csproj" Id="178b08f4-48c2-4edd-8f58-f201946fbb97" />
   <Project Path="StringsApp/StringsApp.csproj" Id="e067c8d5-6ecc-4a63-873f-83bf74cdb8f7" />
