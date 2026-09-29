@@ -33,7 +33,7 @@
             }
 
             // Μετατροπή και υπολογισμοί - Λογική του προγράμματος
-            litersNeeded = Math.Round(consumption * distance / 100, 2); // Calculate total liters needed
+            litersNeeded = Math.Round(consumption / 100 * distance, 2); // Calculate total liters needed
             totalCost = Math.Round(litersNeeded * FUEL_PRICE, 2); // Calculate total cost
 
             // Εμφάνιση αποτελεσμάτων
