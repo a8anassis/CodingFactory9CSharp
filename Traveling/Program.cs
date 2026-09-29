@@ -10,25 +10,25 @@
         static void Main(string[] args)
         {
             // Δήλωση και αρχικοποίηση μεταβλητών
-            const double FUEL_PRICE = 1.85D;    // Example fuel price
+            const double FUEL_PRICE = 1.85;    // Example fuel price
 
-            double consumption      = 0.0;  // Fuel consumption in liters per 100 km
-            double distance         = 0.0;  // Distance in km
-            double litersNeeded     = 0.0;  // Total liters needed for the trip
-            double totalCost        = 0.0;  // Total cost of the fuel for the trip
+            //double consumption      = 0.0;    // Fuel consumption in liters per 100 km
+            //double distance         = 0.0;    // Distance in km
+            double litersNeeded;                // Total liters needed for the trip
+            double totalCost;                   // Total cost of the fuel for the trip
 
             // Εισαγωγή δεδομένων, data binding και validation
             Console.WriteLine("Δώστε κατανάλωση (λίτρα/100km)");
-            if (!double.TryParse(Console.ReadLine(), out consumption) || consumption <= 0)
+            if (!double.TryParse(Console.ReadLine(), out double consumption) || consumption <= 0)
             {
                 Console.WriteLine("Μη έγκυρη είσοδος για την κατανάλωση.");
                 return;
             }
 
             Console.WriteLine("Δώστε απόσταση (km)");
-            if (!double.TryParse(Console.ReadLine(), out distance) || distance <= 0)
+            if (!double.TryParse(Console.ReadLine(), out double distance) || distance <= 0)
             {
-                Console.WriteLine("Μη έγκυρη είσοδος για την κατανάλωση.");
+                Console.WriteLine("Μη έγκυρη είσοδος για την απόσταση.");
                 return;
             }
 
