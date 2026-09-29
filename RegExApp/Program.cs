@@ -11,6 +11,7 @@ namespace RegExApp
 
         public static bool TestCoding(string? s)
         {
+            if (s == null) return false;
             string pattern = @"^coding$";
 
             if (s == null) return false;
@@ -21,8 +22,9 @@ namespace RegExApp
 
         public static void TestMatch(string? s)
         {
+            if (s == null) return;
             string pattern = @"^coding$";
-            Match match = Regex.Match(s!, pattern);
+            Match match = Regex.Match(s, pattern);
 
             if (match.Success)
             {
@@ -33,9 +35,11 @@ namespace RegExApp
 
         public static void TestMatches(string? s)
         {
+            if (s == null) return;
+
             string pattern = @"\d+";
 
-            MatchCollection matches = Regex.Matches(s!, pattern);
+            MatchCollection matches = Regex.Matches(s, pattern);
 
             foreach (Match match in matches)
             {
@@ -46,9 +50,11 @@ namespace RegExApp
 
         public static void TestGroups(string? s)
         {
+            if (s == null) return;
+
             string pattern = @"(\d{2})-(\d{2})-(\d{4})";
 
-            MatchCollection matches = Regex.Matches(s!, pattern);
+            MatchCollection matches = Regex.Matches(s, pattern);
 
             foreach (Match match in matches)
             {
@@ -62,7 +68,9 @@ namespace RegExApp
         // Zero-lenght assertions
         public static bool TestPassword(string? s)
         {
-            return Regex.IsMatch(s!, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{12,}$");
+            if (s == null) return false;
+
+            return Regex.IsMatch(s, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{12,}$");
         }
 
     }

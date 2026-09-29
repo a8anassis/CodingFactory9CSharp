@@ -11,6 +11,7 @@
             int sum = arr.Sum();
             double average = arr.Average();
             int count = arr.Count();
+            int count2 = arr.Length;
             int countGT4 = arr.Count(x => x > 4);
 
             var filtered = arr.Where(x => x > 4).ToArray(); // Filtering

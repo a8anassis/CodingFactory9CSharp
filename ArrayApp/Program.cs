@@ -59,7 +59,17 @@
             int[] arr4 = { 5, 2, 8, 1, 3 };
             Array.Sort(arr4); // Sorts the array in ascending order
             Array.Reverse(arr4); // Reverses the order of the elements in the array
-            int index = Array.IndexOf(arr4, 3); // Finds the index of the first occurrence of 3 in the array
+
+            int intToFind = 3;
+            int index = Array.IndexOf(arr4, intToFind); // Finds the index of the first occurrence of 3 in the array
+            if (index == -1)
+            {
+                Console.WriteLine($"{intToFind} is not found in the array.");  
+            }
+            else
+            {
+                Console.WriteLine($"The index of {intToFind} is: {index}");
+            }
 
             int[] copy = new int[arr4.Length];
             Array.Copy(arr4, copy, arr4.Length); // Copies the elements of arr4 to copy

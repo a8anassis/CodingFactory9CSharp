@@ -8,6 +8,8 @@
     {
         static void Main(string[] args)
         {
+
+            // String Interning: identical string literals are stored only once in memory.
             string? str1 = "hello";
             string? str2 = "hello";
             string? str3 = new string("hello");
@@ -41,14 +43,31 @@
             string? sub = str1.Substring(0, 2); // "he"   startIndex, length
             string part = str1.Substring(2);    // "llo"   startIndex to end of string
 
+            // Improvements:
+            // 1) Use range syntax (C# 8+) which is shorter and clearer
+            string? subRange = str1[..2];   // "he"
+            string? partRange = str1[2..];  // "llo"
+
+            // 2) Null-guarded versions if str1 may be null
+            string? subRangeSafe = str1 is null ? null : str1[..2];
+            string? partRangeSafe = str1 is null ? null : str1[2..];
+
             // indexOf, lastIndexOf
-            int index = str1.IndexOf('l');              // 2
-            int lastIndex = str1.LastIndexOf("he");     // 0
+            int index = (str1 is null) ? -1 : str1.IndexOf('l');              // 2
+            if (index != -1)
+            {
+                Console.WriteLine($"First occurrence of 'l' is at index: {index}");
+            }
+            else
+            {
+                Console.WriteLine("'l' not found in the string.");
+            }
+            int lastIndex = (str1 is null) ? -1 : str1.LastIndexOf("he");     // 0
 
             // Trim
             string? padded = "  hello  ";
-            string? trimmed = padded.Trim(); // "hello"
-
+            string? trimmed = (padded is null) ? null : padded.Trim(); // "hello"
+            Console.WriteLine(trimmed);
         }
     }
 }
