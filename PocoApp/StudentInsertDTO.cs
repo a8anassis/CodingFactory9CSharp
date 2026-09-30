@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace PocoApp;
 
-namespace PocoApp
+internal record StudentInsertDTO(string? Firstname, string? Lastname)
 {
-    internal record StudentInsertDTO(string? Firstname, string? Lastname)
-    {
-    }
 }
