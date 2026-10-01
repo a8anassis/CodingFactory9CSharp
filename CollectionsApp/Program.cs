@@ -6,6 +6,7 @@
         {
             var list = new List<string>() { "Hello", "World" }; // Collection Initializer
             List<string> list2 = [ "Hello", "Coding" ];           // C#12 - Collection initialization syntax
+            List<string> list3 = new() { "Hello", "Factory" };        // C#9 - Target-typed new expression>
 
             var hashSet = new HashSet<string>() { "Hello", "World" };
             HashSet<string> hashSet2 = ["Hello", "Coding"];

@@ -19,16 +19,12 @@ namespace OperatorOverloading
         }
 
         public static Point operator +(Point p1, Point p2)
-        {
-            ArgumentNullException.ThrowIfNull(p1);
-            ArgumentNullException.ThrowIfNull(p2);
+        {    
             return new Point(p1.X + p2.X);
         }
 
         public static Point operator -(Point p1, Point p2)
         {
-            ArgumentNullException.ThrowIfNull(p1);
-            ArgumentNullException.ThrowIfNull(p2);
             return new Point(p1.X - p2.X);
         }
 
