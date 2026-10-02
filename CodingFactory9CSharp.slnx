@@ -11,6 +11,7 @@
   <Project Path="ExpressionBodyMethods/ExpressionBodyMethods.csproj" Id="4372920e-8047-4a8d-b2c9-6a751e463751" />
   <Project Path="ExtractCapitals/ExtractCapitals.csproj" Id="e920b1cf-8534-40c8-9791-118334919779" />
   <Project Path="FileManagement/FileManagement.csproj" Id="e2139254-3d2d-4b54-94b5-76c8a5b8a4f0" />
+  <Project Path="FileManagement2/FileManagement2.csproj" Id="0649a254-f9bf-49fa-8571-94ffb01a4a3d" />
   <Project Path="FomratExceptionApp/FormatExceptionApp.csproj" Id="9e392791-f6cc-477e-81b5-3393052b0382" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="IfCases/IfCases.csproj" Id="5aa43c36-9767-49bd-9ae4-be278ca17206" />
@@ -31,6 +32,7 @@
   <Project Path="ProductsVat/ProductsVat.csproj" />
   <Project Path="Pyramid/Pyramid.csproj" Id="3e1d3ed4-fc78-4849-b5e1-8b610ef48aea" />
   <Project Path="RegExApp/RegExApp.csproj" Id="8667fcdf-8f6c-4322-b2ea-dd39dc8972dc" />
+  <Project Path="StackApp/StackApp.csproj" Id="e7c1cc67-4585-4087-92ec-62501c5e663b" />
   <Project Path="StringBuilderApp/StringBuilderApp.csproj" Id="178b08f4-48c2-4edd-8f58-f201946fbb97" />
   <Project Path="StringsApp/StringsApp.csproj" Id="e067c8d5-6ecc-4a63-873f-83bf74cdb8f7" />
   <Project Path="SwapApp/SwapApp.csproj" Id="0e0503e4-5c0e-4b16-a411-efc0391291bd" />

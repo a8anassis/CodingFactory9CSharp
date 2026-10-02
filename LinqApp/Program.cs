@@ -123,10 +123,10 @@ namespace LinqApp
         public static int SumAll(int[] arr)
         {
             // return (from num in arr select num).Sum();   // query syntax
-            //return arr.Sum();                               // Fluent
+            return arr.Sum();                               // Fluent
             //return arr.Count();
             // return arr.Max();
-            return arr.Min();   // smallest element (throws InvalidOperationException on an empty array)
+            //return arr.Min();   // smallest element (throws InvalidOperationException on an empty array)
         }
 
         // Average() returns the arithmetic mean as a double.
