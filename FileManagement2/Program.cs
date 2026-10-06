@@ -11,22 +11,22 @@ namespace FileManagement2
 
             try
             {
-                // For ANSI Greek files use: Encoding.GetEncoding(1253)
-                // (requires CodePagesEncodingProvider registration in .NET Core+)
-                using StreamReader reader = new(filePath, Encoding.UTF8);
+                // autmatic resourcse cleanup with using statement
+                using (StreamReader reader = new(filePath, Encoding.UTF8))
+                { 
+                    int ordinal;
+                    while ((ordinal = reader.Read()) != -1)
+                    {
+                        char ch = (char)ordinal;
+                        if (ch is '\r' or '\n') continue;
 
-                int ordinal;
-                while ((ordinal = reader.Read()) != -1)
-                {
-                    char ch = (char)ordinal;
-                    if (ch is '\r' or '\n') continue;
+                        dll.UpSert(ch);
+                    }
 
-                    dll.UpSert(ch);
+                    //dll.SortByCount();
+                    dll.SortByValueAsc();
+                    dll.Traverse();
                 }
-
-                //dll.SortByCount();
-                dll.SortByValueAsc();
-                dll.Traverse();
             }
             catch (FileNotFoundException)
             {
@@ -38,8 +38,11 @@ namespace FileManagement2
             }
             catch (IOException ex)
             {
-                Console.Error.WriteLine(ex.Message);
+                Console.Error.WriteLine("Ι/Ο Error: {ex.Message}");
             }
         }
     }
 }
+
+
+

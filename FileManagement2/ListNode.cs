@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace FileManagement2;
 
-namespace FileManagement2
+internal class ListNode<T>
 {
-    internal class ListNode<T>
-    {
-        public required T Value { get; init; }
-        public int Count { get; set; }
-    }
+    public required T Value { get; init; }
+    public int Count { get; set; }
 }

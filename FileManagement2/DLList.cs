@@ -6,21 +6,15 @@ internal class DLList<T>
 
     public bool IsEmpty => _list.Count == 0;
 
-    public void InsertFirst(T t) => _list.AddFirst(new ListNode<T> { Value = t, Count = 1 });
-
-    public void InsertLast(T t) => _list.AddLast(new ListNode<T> { Value = t, Count = 1 });
-
-    public ListNode<T>? FindNode(T t)
+    private ListNode<T>? FindNode(T t)
     {
         foreach (var node in _list)
         {
             /* Είναι ο τρόπος να συγκρίνουμε δύο τιμές για ισότητα σε generic κώδικα, όπου δεν ξέρουμε τι είναι το T.
              * Χρησιμοποιούμε το EqualityComparer<T>.Default.Equals για να συγκρίνουμε τις τιμές.
              *
-             * if (node.Value == t)          // error CS0019: το == δεν ορίζεται για αδέσμευτο T
-             * if (node.Value.Equals(t))     // compile-άρει, αλλά έχει δύο προβλήματα
-             *
-             * Το == δεν δουλεύει γιατί ο compiler δεν ξέρει αν το T έχει operator ==. Το .Equals() έχει δύο προβλήματα:
+             * if (node.Value == t)          // error CS0019: το == μπορεί να μην ορίζεται για T
+             * if (node.Value.Equals(t))     // κάνει compile, αλλά έχει δύο προβλήματα
              *
              * Αν το node.Value είναι null, πετάει NullReferenceException.
              * Για value types (π.χ. int, structs) καλεί το object.Equals(object), άρα κάνει boxing σε κάθε σύγκριση.
@@ -38,21 +32,17 @@ internal class DLList<T>
         return null;
     }
 
-    public void IncreaseCount(T t)
-    {
-        var node = FindNode(t);
-        if (node is not null) node.Count++;
-    }
+    private void InsertLast(T t) => _list.AddLast(new ListNode<T> { Value = t, Count = 1 });
 
     // Increment if present, otherwise append — single scan
-    public void UpSert(T t)    // works like upsert: if exists, increment count; else, insert new node
+    public void UpSert(T t)
     {
         var node = FindNode(t);
         if (node is null) InsertLast(t);
         else node.Count++;
     }
 
-    public int TotalCount() => _list.Sum(n => n.Count);
+    private int TotalCount() => _list.Sum(n => n.Count);
 
     //public void SortByCount() => Reorder(_list.OrderByDescending(n => n.Count).ToList());
 

@@ -40,7 +40,7 @@ internal class CFStack
     public int GetItemAt(int index)
     {
         if (index < 0 || index > _top)
-            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+            throw new ArgumentOutOfRangeException("Index is out of range.");
         return _items[index];
     }
 }

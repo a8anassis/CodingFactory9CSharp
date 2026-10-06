@@ -9,13 +9,12 @@ namespace WebAppStarter9.Pages.Students
     public class InsertModel : PageModel
     {
         [BindProperty]
-        public InsertStudentDTO? InsertStudentDTO { get; set; }
+        public InsertStudentDTO InsertStudentDTO { get; set; } = new();
         public StudentReadOnlyDTO? StudentReadOnlyDTO { get; set; }
         public SelectList? Cities { get; set; }
 
         public void OnGet()
         {
-            InsertStudentDTO = new InsertStudentDTO();
             LoadCities();
         }
 
@@ -28,12 +27,12 @@ namespace WebAppStarter9.Pages.Students
             }
 
             // Service
-            StudentReadOnlyDTO = new StudentReadOnlyDTO(1, InsertStudentDTO?.Firstname, 
-                InsertStudentDTO?.Lastname);
+            StudentReadOnlyDTO = new StudentReadOnlyDTO(1, InsertStudentDTO.Firstname, InsertStudentDTO.Lastname);
 
             TempData["StudentName"] = 
                 $"{StudentReadOnlyDTO.Firstname}, {StudentReadOnlyDTO.Lastname}";
 
+            // Post-Redirect-Get pattern: redirect to a new page after successful form submission
             return RedirectToPage("/Students/Success");
         }
 
